@@ -10,9 +10,9 @@ driver.find_element(By.LINK_TEXT, "XPaths").click()
 time.sleep(1)
 botones = driver.find_elements(By.TAG_NAME, "button")
 # print(len(botones))
-print(botones[10].location["x"])
+print(botones[10].location["y"])
 #Movemos el scroll hacia abajo hasta la posición del botón 10
-driver.execute_script("window.scrollBy(0,arguments[0])",botones[10].location["y"])
+driver.execute_script("window.scrollBy(0,arguments[0])",botones[10].location["x"])
 
 #Podemos ejecutar un alert por ejemplo
 driver.execute_script("alert('Soy un alert implementado desde Selenium')")

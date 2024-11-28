@@ -24,6 +24,9 @@ class prueba_pom(unittest.TestCase):
         #SEARCH RESULTS GOOGLE PAGE
         search_result_page = pages.SearchResultsPage(self.driver)
         assert search_result_page.we_are_on_result_page(texto_a_buscar), "No estamos en la página de resultados"
+        # titulo_resultados = pages.BasePage(self.driver)
+        # print(titulo_resultados.get_title())
+        # assert  titulo_resultados.get_title() == "Wikipedia - Buscar con Google", "No estamos en la página de resultados"
         search_result_page.click_on_first_result()
         
         #WIKIPEDIA PAGE

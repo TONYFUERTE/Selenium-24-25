@@ -12,7 +12,6 @@ class prueba_pom(unittest.TestCase):
         
         driver.get("https://www.google.com")
         #Rechazar cookies
-        # time.sleep(1000)
         driver.find_element(By.XPATH, "//div[text()='Rechazar todo']/ancestor::button").click()
         #Barra de búsqueda
         search_bar = driver.find_element(By.NAME, "q")
