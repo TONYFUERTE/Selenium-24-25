@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import pages2
+import Patron_Page_Object_Model_POM.hecho_en_clase.POM2 as POM2
 import time
 
 class prueba_pom(unittest.TestCase):
@@ -16,7 +16,7 @@ class prueba_pom(unittest.TestCase):
         
         #GOOGLE
         entrada = 'cifp majada marcial'
-        google_procces = pages2.PaginaGoogle(self.driver)
+        google_procces = POM2.PaginaGoogle(self.driver)
         google_procces.rechazar_Cookies()
         google_procces.busqueda(entrada)
         google_procces.pulsar_primera_busqueda()
@@ -25,7 +25,7 @@ class prueba_pom(unittest.TestCase):
         apartado_menu = 'Estudios'
         subapartado = 'Informática y comunicaciones'
         coordenada_y = 500
-        majada = pages2.CifpMajada(self.driver)
+        majada = POM2.CifpMajada(self.driver)
         majada.entrar_apartado_menu(apartado_menu)
         majada.entrar_subapartado(subapartado)
         majada.hacer_scroll(coordenada_y)
