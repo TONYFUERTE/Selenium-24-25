@@ -1,12 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
 import time
 from random import randint
 
 driver = webdriver.Chrome()
-wait = WebDriverWait(driver, 10,0.2)
 
 driver.get('http://localhost:3000/')
 
